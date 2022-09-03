@@ -21,11 +21,3 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-  
- - task: Mavenbuil
-    displayName: Build Docker image
-    inputs:
-      mavenPomFile: 'pom.xml'
-      goals: 'spring-petclinic:build-image'
-      publishJUnitResults: false
-      jdkVersionOption: '1.11'
